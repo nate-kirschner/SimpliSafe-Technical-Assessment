@@ -8,9 +8,9 @@
 
 ## Implementation
 
-I implemented the class TicTacToe.
+I implemented the class TicTacToe in src/TicTacToe.java.
 It defines the public enum GridSpace which is either an X, O, or EMPTY representing how a grid space in the tic tac toe board can be filled.
-The constructor takes a 2d ArrayList of GridSpace which is stores in a private field variable as the grid.
+The constructor takes a 2d ArrayList of GridSpace which it stores in a private field variable as the grid.
 
 ## Methods
 
@@ -26,7 +26,7 @@ The public methods of the class are the following:
   - Determines if either a player has won the game or if no more moves can be made.
 
 - `checkWinner()`
-  - Checks which player has won the game. If no one has won, returns the GridSpace.EMPTY. I chose this value to indicate a draw for simplicity rather than creating a new type.
+  - Checks which player has won the game. If no one has won, returns GridSpace.EMPTY. I chose this value to indicate a draw for simplicity rather than creating a new type.
 
 My implementation of the `checkWinner()` method involves checking each type of win condition one by one, for each player. While it would be computationally faster to check each player during the same iteration of the grid, or check multiple win conditions during the same iterations, I chose to keep them separate for the purposes of extensibility. If the win conditions change in the future, or the player types change, it is easy to sub in different win condition private methods rather than have them all be coupled to each other.
 
